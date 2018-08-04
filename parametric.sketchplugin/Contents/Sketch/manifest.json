@@ -1,0 +1,40 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Constrain 10px",
+      "identifier": "constrain-10px",
+      "script": "addConstraint.js"
+    },
+    {
+      "script": "interface.js",
+      "name": "Action Listener",
+      "handlers": {
+        "actions": {
+          "SelectionChanged.begin": "handleSelectionChangedBegin",
+          "SelectionChanged.finish": "handleSelectionChangedFinish",
+          "LayersMoved": "handleLayersMoved",
+          "TextChanged": "handleTextChanged",
+          "Scale": "handleScale",
+          "Edit": "handleEdit"
+        }
+      },
+      "identifier": "action-listener"
+    }
+  ],
+  "menu": {
+    "title": "Parametric",
+    "items": [
+      "constrain-10px"
+    ]
+  },
+  "version": "0.1.0",
+  "name": "parametric",
+  "identifier": "parametric",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Conor Davidson",
+  "authorEmail": "conor@conordavidson.com"
+}
